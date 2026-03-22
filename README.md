@@ -177,13 +177,14 @@ One of the simpler use cases you can use Hindsight for is to personalize AI chat
 
 The requirements for this use case usually look something like this:
 
-![Per-User Memories](./hindsight-docs/static/img/per-user-memory-requirements.png)
+![Applicable Requirements](Screenshot%202026-03-22%20165612.png)
 
 <video src="https://github.com/user-attachments/assets/4805e8e1-e7d1-47c6-a4f8-2344a5ec8906" controls></video>
 
 Satisfying these requirements in Hindsight is straightforward. When new user inputs and tool calls are ingested into Hindsight using the retain operation, custom metadata can be used to enrich the new memories. Metadata provides a convenient way to isolate memories that need to be restricted to a given user. Once these are fed into the retain operation, any raw memories and mental models that get created can be filtered when retrieving relevant memories. 
 
-![Per-User Memories](./hindsight-docs/static/img/per-user-memory-howto.png)
+
+![Step-by-Step Guide](Screenshot%202026-03-22%20165650.png)
 
 ---
 
