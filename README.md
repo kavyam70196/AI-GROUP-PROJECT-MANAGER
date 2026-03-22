@@ -1,6 +1,8 @@
 <div align="center">
 
-![Hindsight Banner](Screenshot 2026-03-22 165502.png)
+![Hindsight Banner](Screenshot%202026-03-22%20171522.png)
+
+
 
 [Documentation](https://hindsight.vectorize.io) • [Paper](https://arxiv.org/abs/2512.12818) • [Cookbook](https://hindsight.vectorize.io/cookbook) • [Hindsight Cloud](https://ui.hindsight.vectorize.io/signup)
 
