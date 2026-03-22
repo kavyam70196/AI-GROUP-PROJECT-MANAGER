@@ -50,7 +50,7 @@ The easiest way to use Hindsight with an existing agent is with the LLM Wrapper.
 
 If you need more control over how and when your agent stores and recalls memories, there's also a simple API you can integrate with using the SDKs or directly via HTTP.
 
-![Hindsight Banner](Screenshot 2026-03-22 165502.png)
+![LLM Wrapper Code](Screenshot%202026-03-22%20165535.png)
 
 ---
 
@@ -189,7 +189,7 @@ Satisfying these requirements in Hindsight is straightforward. When new user inp
 
 ## Architecture & Operations
 
-![Overview](./hindsight-docs/static/img/hindsight-overview.webp)
+![Architecture Overview](Screenshot%202026-03-22%20165712.png)
 
 Most agent memory implementations rely on basic vector search or sometimes use a knowledge graph. Hindsight uses biomimetic data structures to organize agent memories in a way that is more like how human memory works:
 
@@ -231,7 +231,7 @@ client.retain(
 
 Behind the scenes, the retain operation uses an LLM to extract key facts, temporal data, entities, and relationships. It passes these through a normalization process to transform extracted data into canonical entities, time series, and search indexes along with metadata. These representations create the pathways for accurate memory retrieval in the recall and reflect operations. 
 
-![Retain Operation](hindsight-docs/static/img/retain-operation.webp)
+![Retain Operation Flowchart](Screenshot%202026-03-22%20165742.png)
 
 ### Recall
 
@@ -255,7 +255,7 @@ Recall performs 4 retrieval strategies in parallel:
 - Graph: Entity/temporal/causal links
 - Temporal: Time range filtering
 
-![Retain Operation](hindsight-docs/static/img/recall-operation.webp)
+![Recall Operation Flowchart](Screenshot%202026-03-22%20165809.png)
 
 The individual results from the retrievals are merged, then ordered by relevance using reciprocal rank fusion and a cross-encoder reranking model.
 
@@ -281,7 +281,7 @@ client = Hindsight(base_url="http://localhost:8888")
 client.reflect(bank_id="my-bank", query="What should I know about Alice?")
 ```
 
-![Retain Operation](hindsight-docs/static/img/reflect-operation.webp)
+![Reflect Operation Flowchart](Screenshot%202026-03-22%20165835.png)
 
 ---
 
